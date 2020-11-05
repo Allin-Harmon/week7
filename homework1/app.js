@@ -19,8 +19,6 @@ paragraphs.forEach (para => {
 });
 
 
-
-
 // 5) Add a fourth paragraph with the text content of "new paragraph" to our div that contains the three other paragraphs. HINT: You'll need to get the <div> element, you can store it in a variable like we've seen in the past or you can actually do it all on one line. you can do this w/ document.createElement(), createTextNode(), & appendChild. OR you can use the .innerHTML (make sure not to overwrite the existing paragraphs)
 const paraDiv = document.querySelector('div');
 console.log(paraDiv);
