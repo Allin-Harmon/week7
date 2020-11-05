@@ -1,0 +1,25 @@
+Week 7 Homework 3 AND 4 - Try/Catch & NPM
+1) Create a new js file, you can name it anything you want. (Please make it relevant to this HW)
+
+2) Were going to create a try/catch block. In our try block try to call the foo function (We haven't defined a foo function so this should cause an error).
+
+3) In the catch block of our try/catch block we want to accept a parameter (I like to use err, but you can name it anything you want) Inside the code block of our catch console.log() the error message. HINT: if you passed in err as the parameter i.e. catch(err) { } you can access the message w/ err.message as message is a property of the error object
+
+4) You will NOT be able to show me this (and that is OK) but just for practice, execute this file in the CLI. You can do that by typing "node yourFilename.js" and you should see it execute in the terminal
+
+5) Add a finally block onto our try/catch we created earlier. The finally block should console.log "This is always executed" OPTIONAL: Check your work by executing the JS file in the CLI w/ node. You should see "foo is not defined" & "This is always executed"
+
+6) Create a function named fizz, it shouldn't take any parameters. In the code block it should throw an error. Pass in any error message you like. HINT: throw new Error("my error message"); OR throw "my error message"
+
+7) Create another function named buzz, it also shouldn't take any parameters. In the code block call the fizz function we defined above. Remember that fizz throws an error so we have to surround the function call in a try/block. B/c we have a try block we must have a catch, catch the error and write the message to the console. HINT: Depending on how you threw the error will depend on how you can access the message, e.g. if you threw it with throw new Error("my error message"); you'll have an error object and can get the message with err.message. However if you used throw 'my error' you're just throwing a string an therefore your message is just stored in the err variable. (where err === whatever you passed in as the parameter of the catch block)
+
+8) Now we're going to set this up as a node project. To do this run "npm init" in your CLI, follow the prompts, it should generate a new file called package.json
+
+9) Using npm install the following dependencies: express, mysql, ejs, bcrypt (these are the package names, i.e. npm install ejs) NOTE: You should see express, mysql, ejs, and bcrypt in the package.json file under dependencies. Even if they don't successfully install you should still see them here, it is ok if they don't actually install properly. You should also see a node_modules folder.
+
+10) Using npm install nodemon as a dev dependency. HINT: npm install --save-dev packageName (windows) npm install -D packageName (Macintosh)
+BONUS:
+* Search npm's website: https://www.npmjs.com/ find a cool package/dependency you like the sound of paste the link to the npm page in a comment. EXAMPLE: (don't use this one) express --> // https://www.npmjs.com/package/express
+* Play around with the node REPL HINT: "node" should start the repl, "ctrl + c" should stop the repl
+* Delete your node modules folder, and reinstall all your dependencies with one command. HINT:"npm install"
+* Add a .gitignore file, in that file add the line "/node_modules" this should prevent the node_modules from being pushed to github. Remember if you clone on to a new computer you'll have to reinstall all of your dependencies with "npm install"
